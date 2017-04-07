@@ -1,0 +1,14 @@
+Below is the list of baseline queries you should implement in PHP. You may implement additional queries based on the database you have created.
+
+1. Find the names of authors who have purchased a book written by themselves. (aid and cid will not be the same).
+2. User input one author name, find all the books written by the author(s).
+3. User input one customer name, find purchase history of the customer(s).
+4. User input one or more words of a book title, find all information of the books whose titles contain those words.
+5. Design a drop down menu so user can use it to select a year and find the title of the best selling book of that year.
+6. Record the information that a customr has purchased a book.
+7. Add a new customer to the database.
+8. User input one name and address, update the address in people, and author or customer table if applicable.
+9. Add a new book to the database. If the author and/or the publisher of the new book is not in the database, insert all information about the author and/or publisher as well.
+10. Delete a book. If the author of the book has not written other books, delete the author as well.
+
+NOTE: Do not use Java Script or CSS in your html file. 
