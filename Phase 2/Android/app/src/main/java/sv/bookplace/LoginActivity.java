@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         final String email = emailText.getText().toString().trim();
         final String pw = passwordText.getText().toString().trim();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.253.87.156/project/auth/login.php",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, MainActivity.serverURL_login,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

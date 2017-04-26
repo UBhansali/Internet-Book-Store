@@ -1,8 +1,10 @@
 package sv.bookplace;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
@@ -41,10 +43,11 @@ public class RegisterActivity extends AppCompatActivity {
         final String email = emailText.getText().toString().trim();
         final String pw = passwordText.getText().toString().trim();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://10.253.87.156/project/auth/register.php",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, MainActivity.serverURL_register,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        Log.d("POS", response);
                         try {
                             JSONObject obj = new JSONObject(response);
                             if (obj.getString("auth").equals("true"))
@@ -56,6 +59,18 @@ public class RegisterActivity extends AppCompatActivity {
 
                                 Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
                                 startActivity(intent);
+                            }
+                            else if (obj.getString("auth").equals("false"))
+                            {
+                                if (obj.getString("error").equals("register_user_exists"))
+                                {
+                                    AlertDialog.Builder alert = new AlertDialog.Builder(RegisterActivity.this);
+                                    alert.setCancelable(false);
+                                    alert.setTitle("User exists");
+                                    alert.setMessage("This email already exists. Please choose another email.");
+                                    alert.setPositiveButton("Ok", null);
+                                    alert.create().show();
+                                }
                             }
                             else
                             {

@@ -10,6 +10,9 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
+    static final String serverURL_login = "http://192.168.1.152/project/auth/login.php";
+    static final String serverURL_register = "http://192.168.1.152/project/auth/register.php";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
