@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     static final String serverURL_register = "http://192.168.1.152/project/auth/register.php";
     static final String serverURL_query1 = "http://192.168.1.152/project/mobile/query1.php";
     static final String serverURL_query2 = "http://192.168.1.152/project/mobile/query2.php";
+    static final String serverURL_query3 = "http://192.168.1.152/project/mobile/query3.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

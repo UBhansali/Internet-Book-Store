@@ -12,4 +12,6 @@
     <string name="query_2">Query 2</string>
     <string name="query_3">Query 3</string>
     <string name="sign_out">Sign Out</string>
+    <string name="type_name_of_customer">Type name of Customer</string>
+    <string name="names_of_authors_who_have_purchased_a_book_written_by_themselves">Names of authors who have purchased a book written by themselves:</string>
 </resources>
