@@ -2,4 +2,14 @@
     <string name="app_name">BookPlace</string>
     <string name="login_email">Email</string>
     <string name="login_password">Password</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="query_1">Query 1</string>
+    <string name="query_2">Query 2</string>
+    <string name="query_3">Query 3</string>
+    <string name="sign_out">Sign Out</string>
 </resources>
