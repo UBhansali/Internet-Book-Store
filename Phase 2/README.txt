@@ -1,3 +1,7 @@
+COMP 3100: Database II
+Members: Saurabh Verma, Udit Bhansali
+Phase 3
+
 The purpose of this project is to develop PHP APIs that expose our PHP/MySQL-based 
 application and allow a mobile app to query the database. This project consists of 
 two components:
