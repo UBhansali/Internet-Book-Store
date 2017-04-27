@@ -5,7 +5,7 @@ require_once("../object/publisher.php");
 require_once("../database.php");
 
 try {
-    $stmt = $conn->prepare("SELECT DISTINCT a.name FROM purchase p, author a, customer c WHERE c.cid = p.cid AND a.name = c.name");
+    $stmt = $conn->prepare("SELECT distinct(b.year) FROM book b ORDER by b.year ASC");
     $stmt->execute();
     print json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
 } catch (Exception $e) {

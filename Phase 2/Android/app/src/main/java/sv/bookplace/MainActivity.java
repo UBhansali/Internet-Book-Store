@@ -6,15 +6,17 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
     static final String serverURL_login = "http://192.168.1.152/project/auth/login.php";
     static final String serverURL_register = "http://192.168.1.152/project/auth/register.php";
+    static final String serverURL_books = "http://192.168.1.152/project/mobile/books.php";
     static final String serverURL_query1 = "http://192.168.1.152/project/mobile/query1.php";
     static final String serverURL_query2 = "http://192.168.1.152/project/mobile/query2.php";
     static final String serverURL_query3 = "http://192.168.1.152/project/mobile/query3.php";
+    static final String serverURL_years = "http://192.168.1.152/project/mobile/years.php";
+    static final String serverURL_query5 = "http://192.168.1.152/project/mobile/query5.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

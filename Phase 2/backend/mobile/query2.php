@@ -4,7 +4,7 @@ require_once("../object/author.php");
 require_once("../object/publisher.php");
 require_once("../database.php");
 
-$name = $_POST["auth_name"];
+$name = $_GET["auth_name"];
 
 try {
     $stmt = $conn->prepare("SELECT * FROM book WHERE ISBN13 IN (SELECT ISBN13 FROM writes WHERE aid IN (SELECT aid FROM author WHERE name = :name))");

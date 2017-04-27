@@ -14,4 +14,10 @@
     <string name="sign_out">Sign Out</string>
     <string name="type_name_of_customer">Type name of Customer</string>
     <string name="names_of_authors_who_have_purchased_a_book_written_by_themselves">Names of authors who have purchased a book written by themselves:</string>
+    <string name="bookplace">BookPlace</string>
+    <string name="what_would_you_like_to_buy_today">What would you like to buy today?</string>
+    <string name="buy">Buy</string>
+    <string name="query_5">Query 5</string>
+
+    <string name="year_intro">Choose a Year</string>
 </resources>

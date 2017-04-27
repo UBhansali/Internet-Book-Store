@@ -3,6 +3,9 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/defaultview"
+            android:title="@string/bookplace" />
+        <item
             android:id="@+id/query1"
             android:title="@string/query_1" />
         <item
@@ -11,5 +14,8 @@
         <item
             android:id="@+id/query3"
             android:title="@string/query_3" />
+        <item
+            android:id="@+id/query5"
+            android:title="@string/query_5" />
     </group>
 </menu>

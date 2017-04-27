@@ -25,16 +25,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class query3 extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //returning our layout file
-        //change R.layout.yourlayoutfilename for each of your fragments
         return inflater.inflate(R.layout.query3, container, false);
     }
 
@@ -42,7 +38,6 @@ public class query3 extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        //you can set the title for your toolbar here for different fragments different titles
         getActivity().setTitle("Query 3");
 
         final EditText authorName = (EditText) getView().findViewById(R.id.authorName);
@@ -51,11 +46,10 @@ public class query3 extends Fragment {
         authorName.addTextChangedListener(new TextWatcher() {
             public void afterTextChanged(Editable s) {
                 final String text = s.toString();
-                StringRequest stringRequest = new StringRequest(Request.Method.POST, MainActivity.serverURL_query3,
+                StringRequest stringRequest = new StringRequest(Request.Method.GET, MainActivity.serverURL_query3 + "?auth_name=" + text.trim(),
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
-                                Log.d("QUERY2", response);
                                 try {
                                     JSONArray jarray = new JSONArray(response);
                                     ArrayList<String> lst = new ArrayList<String>();
@@ -77,15 +71,7 @@ public class query3 extends Fragment {
                             public void onErrorResponse(VolleyError error) {
                                 Log.d("logE", error.getMessage());
                             }
-                        }) {
-
-                    @Override
-                    protected Map<String, String> getParams() {
-                        Map<String, String> parameters = new HashMap<>();
-                        parameters.put("auth_name", text.trim());
-                        return parameters;
-                    }
-                };
+                        });
 
                 RequestQueue requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
                 requestQueue.add(stringRequest);
